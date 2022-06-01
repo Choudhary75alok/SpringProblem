@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean  class="com.springcore.ci.Certi" name="cer">
+<constructor-arg value="Android using kotlin"/>
+</bean>
+
+<bean class="com.springcore.ci.Addition" name="add">
+<constructor-arg value="35"  type="int" index="1"/> <!--if we don't declare the type then it will take string construction by default --> 
+<constructor-arg value="35" type ="int" index="0"/> <!--if there is no string constructor then it will take it from order from top   -->
+								
+</bean>
+
+<bean class="com.springcore.ci.person" name="person">
+<constructor-arg value="Alok Choudhary" />
+<constructor-arg value="101"/>
+<constructor-arg ref="cer" />
+</bean>
+
+	</beans>
